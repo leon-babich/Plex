@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>Img/vspc-icon-256.png</file>
+        <file>Img/w256ConnectorPlug.png</file>
+        <file>Img/DiskIn.bmp</file>
+        <file>Img/DiskOut.bmp</file>
+        <file>Img/gear_2.jpg</file>
+    </qresource>
+</RCC>

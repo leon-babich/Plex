@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WindowSettings</class>
+ <widget class="QDialog" name="WindowSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+background-color: rgb(70, 70, 70);
+}
+
+QTabBar::tab { 
+	background-color: qradialgradient(spread:pad, cx:0.505, cy:0, radius:1.292, fx:0.505075, fy:0.006, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:5px;
+padding:15;
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(0, 255, 0);
+} 
+
+QTabBar::tab:selected { 
+	background-color: qradialgradient(spread:pad, cx:0.500025, cy:1, radius:1.292, fx:0.5001, fy:1, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 0, 0, 255));
+border-color: rgb(255, 255, 0);
+	border-color: rgb(0, 170, 0);
+border-width:3;
+}
+
+QTabBar::field { 
+background-color: rgb(70, 70, 70);
+}
+
+QTabWidget::tab {
+ background-color: rgb(70, 70, 70);
+}
+
+QTabWidget:pane {
+border: 1px solid gray;
+ background-color: rgb(70, 70, 70);
+}
+
+QPushButton
+{
+	background-color: qradialgradient(spread:pad, cx:0.505, cy:0, radius:1.292, fx:0.505075, fy:0.006, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 102, 0, 255));
+border: 1px solid #8f8f91;
+border-radius: 6px;
+padding:4;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton:pressed {
+	background-color: qradialgradient(spread:pad, cx:0.500025, cy:1, radius:1.292, fx:0.5001, fy:1, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 102, 0, 255));
+}
+
+QPushButton:checked {
+/*color: rgb(0, 255, 0);
+border-color: rgb(0, 0, 127);
+background-color: rgb(255, 255, 255);*/
+	border-color: rgb(255, 255, 0);
+border-width: 2px;
+	background-color: qradialgradient(spread:pad, cx:0.500025, cy:1, radius:1.292, fx:0.5001, fy:1, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 102, 0, 255));
+}
+
+QComboBox {
+	background-color: qradialgradient(spread:pad, cx:0.500025, cy:1, radius:1.292, fx:0.5001, fy:1, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 102, 0, 255));
+border-color: rgb(85, 170, 0);
+border-width:2px;
+selection-background-color: rgb(70, 70, 70, 0);
+padding:5;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QComboBox:selected {
+background-color: rgb(70, 70, 70, 0);
+}
+
+QTextEdit {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+
+QLabel {
+background-color: rgb(0, 0, 0, 0);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QSpinBox {
+	background-color: qradialgradient(spread:pad, cx:0.505, cy:0, radius:1.292, fx:0.505075, fy:0.006, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 102, 0, 255));
+padding:6;
+selection-background-color: rgb(70, 70, 70, 0);
+	selection-color: rgb(255, 0, 0);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+background-color: rgb(0, 0, 0, 0);
+	color: rgb(0, 170, 0);
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <attribute name="title">
+       <string>Port</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="spacing">
+        <number>15</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Port&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="labelIcon">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>COM port</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Microgate</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Device</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Name port</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelBaud">
+         <property name="text">
+          <string>Baund rate</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBoxBaud">
+         <item>
+          <property name="text">
+           <string>1200</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2400</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4800</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>9600</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>19200</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>38400</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>57600</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>115200</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>-1</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelByte">
+         <property name="text">
+          <string>Byte size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="comboBoxParity">
+         <item>
+          <property name="text">
+           <string>NoParity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>EvenParity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OddParity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SpaceParity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MarkParity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UnknownParity</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="labelBits">
+         <property name="text">
+          <string>Stop bits</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxPort"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="comboBoxByte">
+         <item>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>-1</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="comboBoxBits">
+         <item>
+          <property name="text">
+           <string>OneStop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>OneAndHalfStop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TwoStop</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UnknownStopBits</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelParity">
+         <property name="text">
+          <string>Parity</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <attribute name="title">
+       <string>Channels</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Channels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelIcon_2">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="labThresh">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Threshold value</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLabel" name="labVal">
+         <property name="text">
+          <string>% value</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labACP">
+         <property name="text">
+          <string>ACP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxAz">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QSpinBox" name="spinBoxAz">
+         <property name="styleSheet">
+          <string notr="true">gridline-color: rgb(85, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="butAutoACP">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QSpinBox" name="spinCoefficACP"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labARP">
+         <property name="text">
+          <string>ARP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBoxNor">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QSpinBox" name="spinBoxNor">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="butAutoARP">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="QSpinBox" name="spinCoefficARP"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labR1">
+         <property name="text">
+          <string>R1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="comboBoxR1">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLabel" name="labR2">
+         <property name="text">
+          <string>R2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QComboBox" name="comboBoxR2">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labS1">
+         <property name="text">
+          <string>S1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="comboBoxS1">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="labS2">
+         <property name="text">
+          <string>S2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QComboBox" name="comboBoxS2">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="labS3">
+         <property name="text">
+          <string>S3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="comboBoxS3">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="labVidR">
+         <property name="text">
+          <string>Video</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QComboBox" name="comboBoxTarR">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLabel" name="labTrigR">
+         <property name="text">
+          <string>Trigger</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3">
+        <widget class="QComboBox" name="comboBoxTrR">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="labVid">
+         <property name="text">
+          <string>Video</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QComboBox" name="comboBoxTar">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QSpinBox" name="spinBoxTar">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="3">
+        <widget class="QPushButton" name="butAutoVidio">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="4">
+        <widget class="QSpinBox" name="spinCoefficVideo"/>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="labTrig">
+         <property name="text">
+          <string>Trigger</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QComboBox" name="comboBoxTr">
+         <item>
+          <property name="text">
+           <string>Channel 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Channel 8</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="QSpinBox" name="spinBoxTr"/>
+       </item>
+       <item row="9" column="3">
+        <widget class="QPushButton" name="butAutoTrig">
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="4">
+        <widget class="QSpinBox" name="spinCoefficTrigger"/>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Type of radar</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2" colspan="2">
+        <widget class="QComboBox" name="comboBoxTypeRadar">
+         <item>
+          <property name="text">
+           <string>TPS 63</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>R 18</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="10" column="4">
+        <widget class="QPushButton" name="butReduceS">
+         <property name="text">
+          <string>Reduce_S</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="4">
+        <widget class="QPushButton" name="butReduceR">
+         <property name="text">
+          <string>Reduce_R</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>Radar mask</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="butAddMask">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="butDeleteMask">
+           <property name="text">
+            <string>Delete</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="butCancelMask">
+           <property name="text">
+            <string>Cancel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="2">
+          <widget class="QLabel" name="labRang">
+           <property name="text">
+            <string>Start range</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labAz_2">
+           <property name="text">
+            <string>End azimuth</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="linAz_2"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="linAz"/>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="linRang"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labAz">
+           <property name="text">
+            <string>Start azimuth</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="linRang_2"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="labRang_2">
+           <property name="text">
+            <string>End range</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listMask"/>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEditMask"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Record</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="spacing">
+        <number>15</number>
+       </property>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBoxCreateRecord">
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Write</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBoxMode">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <item>
+          <property name="text">
+           <string>Board</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>File</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="butPathRead">
+         <property name="text">
+          <string>Path</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labReadRec">
+         <property name="text">
+          <string>Read record</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="butPathWrite">
+         <property name="text">
+          <string>Path</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labCrRec">
+         <property name="text">
+          <string>Create record</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labTarRec">
+         <property name="text">
+          <string>Targets record</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxTarRec">
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Writing</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="butPathTarRec">
+         <property name="text">
+          <string>Path</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Radar display</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="spinBoxStAngle"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBoxProtect">
+         <item>
+          <property name="text">
+           <string>Protected</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Start azimuth</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBoxButLay">
+         <item>
+          <property name="text">
+           <string>Bottom</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Side</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Uncorrect signals</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Button layout</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>Noise filtre</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBoxFiltreNoise"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="butOk">
+       <property name="text">
+        <string>Ok</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>butOk</sender>
+   <signal>clicked()</signal>
+   <receiver>WindowSettings</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

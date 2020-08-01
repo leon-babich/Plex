@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1038</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color: rgb(70, 70, 70);
+	background-color: rgb(0, 0, 126);
+	background-color: rgb(120, 120, 120);
+}
+
+QTableWidget {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+border-radius:1px;
+}
+
+QHeaderView {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+QHeaderView::section:first {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+QHeaderView::section:second {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+
+QMenuBar {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+
+QMenuBar::Item :selected{
+background-color: rgb(85, 85, 255);
+}
+
+QMenu {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+
+QLCDNumber {
+background-color: rgb(70, 70, 70);
+	color: rgb(85, 170, 0);
+}
+
+QPushButton
+{
+	background-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:0.662, fx:0.485, fy:0.057, stop:0 rgba(226, 226, 226, 255), stop:1 rgba(166, 166, 166, 255));
+border: 1px solid #8f8f91;
+border-radius: 6px;
+	border-color: rgb(50, 50, 50);
+border-width:1px;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+	background-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:1.258, fx:0.485, fy:0.057, stop:0 rgba(111, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+QPushButton:checked {
+color: rgb(0, 0, 0);
+border-color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+}
+
+QComboBox {
+	background-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:1.258, fx:0.485, fy:0.057, stop:0 rgba(111, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));
+border-color: rgb(85, 170, 0);
+border-width:2px;
+selection-background-color: rgb(70, 70, 70, 0);
+/*selection-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:1.258, fx:0.485, fy:0.057, stop:0 rgba(111, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));*/
+padding:5;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QComboBox:selected {
+	background-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:1.258, fx:0.485, fy:0.057, stop:0 rgba(111, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+QTextEdit {
+background-color: rgb(70, 70, 70);
+color: rgb(0, 170, 0);
+}
+
+QLabel {
+background-color: rgb(0, 0, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QGraphicsView {
+background-color: rgb(70, 70, 70);
+}
+
+QTabBar::tab { 
+	background-color: qradialgradient(spread:pad, cx:0.505, cy:0, radius:1.292, fx:0.505075, fy:0.006, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:5px;
+padding:1;
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+} 
+
+QTabBar::tab:selected { 
+	background-color: qradialgradient(spread:pad, cx:0.500025, cy:1, radius:1.292, fx:0.5001, fy:1, stop:0 rgba(207, 207, 207, 255), stop:1 rgba(0, 0, 0, 255));
+border-color: rgb(255, 255, 0);
+	border-color: rgb(0, 170, 0);
+border-width:3;
+}
+
+QTabBar::field { 
+background-color: rgb(70, 70, 70);
+}
+
+QTabWidget::tab {
+ background-color: rgb(70, 70, 70);
+border: 1px solid gray;
+}
+
+QTabWidget:pane {
+border: solid;
+ background-color: rgb(70, 70, 70);
+}
+
+QScrollBar {
+background-color: rgb(70, 70, 70);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="buttonStart">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonStop">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QComboBox" name="comboBoxMode">
+          <item>
+           <property name="text">
+            <string>Board</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>File</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="butPath">
+          <property name="text">
+           <string>Path</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="labelBoard">
+          <property name="text">
+           <string>Board</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonStartBoard">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:1.258, fx:0.485, fy:0.057, stop:0 rgba(111, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));
+border-width:0px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QLabel" name="labelPort">
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="butConnectPort">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: qradialgradient(spread:pad, cx:0.485, cy:0.0463182, radius:1.258, fx:0.485, fy:0.057, stop:0 rgba(111, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));
+border-width:0px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Filtr targ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBoxTarg">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">padding:7px;
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QPushButton" name="butSettingsPort">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labIndicator_3">
+          <property name="minimumSize">
+           <size>
+            <width>15</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labIndicator_2">
+          <property name="minimumSize">
+           <size>
+            <width>15</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labIndicator">
+          <property name="minimumSize">
+           <size>
+            <width>15</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEditMessage">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16000</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*border-radius:1px;*/
+background-color: rgb(100, 100, 100);
+border-style:solid;
+
+border-right-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(162, 162, 162, 255));
+border-bottom-color: qlineargradient(spread:pad, x1:0.522, y1:1, x2:0.498, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(162, 162, 162, 255));
+border-top-color: qlineargradient(spread:pad, x1:0.522, y1:1, x2:0.498, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(162, 162, 162, 255));
+border-left-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(162, 162, 162, 255));
+border-width: 10;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="butClear">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:9px;
+</string>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="GlGraph" name="widgetGraph" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder></zorder>
+   <zorder>widgetGraph</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GlGraph</class>
+   <extends>QWidget</extends>
+   <header location="global">glgraph.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
