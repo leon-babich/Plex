@@ -334,38 +334,38 @@ void DataReader::savePath()
 {
     try {
         QFile fileOut("settings.txt");
-
-        if(!fileOut.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            throw ExeptionRange("Fail opening file: ", fileOut.fileName(), "DataReader::savePath()");
-            return;
-        }
-
-        QString str;
         QString strChannels;
-        int n = 0;
 
-        while(!fileOut.atEnd()) {
-            str = fileOut.readLine();
-            str.remove("\r");
-            str.remove("\n");
-            n++;
-            strChannels = n == 2 ? strChannels + str : strChannels;
+        if(fileOut.exists()) {
+            if(!fileOut.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                throw ExeptionRange("Fail opening file: ", fileOut.fileName(), "DataReader::savePath()");
+                return;
+            }
+
+            QString str;
+            int n = 0;
+
+            while(!fileOut.atEnd()) {
+                str = fileOut.readLine();
+                str.remove("\r");
+                str.remove("\n");
+                n++;
+                strChannels = n == 2 ? strChannels + str : strChannels;
+            }
+
+            fileOut.close();
         }
-
-        fileOut.close();
 
         QFile fileIn("settings.txt");
         QTextStream stream(&fileIn);
 
-        if(!fileIn.open(QIODevice::WriteOnly))
-        {
+        if(!fileIn.open(QIODevice::WriteOnly)) {
             throw ExeptionRange("Fail opening file: ", fileIn.fileName(), "DataReader::savePath()");
             return;
         }
 
         stream << m_path;
-        if(n >= 2) stream << endl << strChannels;
+        if(!strChannels.isEmpty()) stream << endl << strChannels;
         fileIn.close();
     }
     catch (ExeptionRange ex) {

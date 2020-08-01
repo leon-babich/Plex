@@ -8,10 +8,6 @@ QT       += core gui
 QT       += serialport
 QT       += opengl
 LIBS     += -lopengl32
-#LIBS     += Mghdlc.lib
-
-#LIBS     += d:/Projects/Plex_New/PlexHandler/Mghdlc.lib
-#INCLUDEPATH += d:/Projects/Plex_New/PlexHandler
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

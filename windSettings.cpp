@@ -412,18 +412,18 @@ void WindowSettings::changeSettingsChannel()
 void WindowSettings::saveChannels()
 {
     QFile fileOut("settings.txt");
-
-    if(!fileOut.open(QIODevice::ReadOnly))
-    {
-        sigSendMessage("<FONT COLOR=RED>Fail opening settings file.");
-        return;
-    }
-
-    QString str;
-    QString strPath;
-    int n = 0;
     QTextStream stream(&fileOut);
-    stream >> strPath;
+    QString strPath;
+
+    if(fileOut.exists()) {
+        if(!fileOut.open(QIODevice::ReadOnly)) {
+            sigSendMessage("<FONT COLOR=RED>Fail opening settings file.");
+            return;
+        }
+
+        QString str;
+        int n = 0;
+        stream >> strPath;
 
 //    while(!fileOut.atEnd()) {
 //        str = fileOut.readLine();
@@ -431,14 +431,17 @@ void WindowSettings::saveChannels()
 //        strPath = n == 1 ? strPath + str : strPath;
 //    }
 
-    fileOut.close();
+        fileOut.close();
+    }
+    else {
+        strPath = "WriteData.bin";
+    }
 
     QFile fileIn("settings.txt");
 //    QTextStream stream(&fileIn);
     stream.setDevice(&fileIn);
 
-    if(!fileIn.open(QIODevice::WriteOnly | QIODevice::Text))
-    {
+    if(!fileIn.open(QIODevice::WriteOnly | QIODevice::Text)) {
         sigSendMessage("<FONT COLOR=RED>Fail opening settings file.");
         return;
     }

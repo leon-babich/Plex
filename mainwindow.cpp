@@ -317,8 +317,9 @@ void MainWindow::readSettingsFile()
 {
     QFile fileOut("settings.txt");
 
-    if(!fileOut.open(QIODevice::ReadOnly))
-    {
+    if(!fileOut.exists()) return;
+
+    if(!fileOut.open(QIODevice::ReadOnly)) {
         ui->textEditMessage->append("<FONT COLOR=RED>Fail opening settings file");
         return;
     }
