@@ -59,7 +59,6 @@ WindowSettings::WindowSettings(QWidget *parent) :
     ui->comboBoxNor->setCurrentIndex(1);
     ui->comboBoxTar->setCurrentIndex(2);
     ui->comboBoxTr->setCurrentIndex(3);
-//    ui->comboBoxProtect->setCurrentIndex(1);
 
     ui->spinBoxAz->setMaximum(20000);
     ui->spinBoxAz->setSingleStep(10);
@@ -152,8 +151,6 @@ WindowSettings::WindowSettings(QWidget *parent) :
     ui->comboBoxTarR->setCurrentIndex(5);
     ui->comboBoxTrR->setCurrentIndex(6);
 
-//    ui->comboBoxTypeRadar->setCurrentIndex(1);
-
     m_timerCountTimeSettings = new QTimer;
     connect(m_timerCountTimeSettings,&QTimer::timeout,this,&WindowSettings::slotSetIsClearOldData);
 
@@ -167,12 +164,10 @@ WindowSettings::~WindowSettings()
 
 void WindowSettings::setSettingsPort()
 {
-    if(m_isMicroGate)
-    {
+    if(m_isMicroGate) {
         m_settingsPort.nameMicro = ui->comboBoxPort->currentText();
     }
-    else
-    {
+    else {
         m_settingsPort.namePort = ui->comboBoxPort->currentText();
     }
 
@@ -241,31 +236,24 @@ void WindowSettings::connectPort()
     setSettingsPort();
     m_port->setSettings(m_settingsPort);
 
-    if(m_isMicroGate)
-    {
-        if(!m_isOpenPort)
-        {
+    if(m_isMicroGate) {
+        if(!m_isOpenPort) {
             isSuccess = m_port->openMGPort();
         }
-        else
-        {
+        else {
             isSuccess = m_port->closeMGPort();
         }
     }
-    else
-    {
-        if(!m_isOpenPort)
-        {
+    else {
+        if(!m_isOpenPort) {
             isSuccess = m_port->openCOMPort();
         }
-        else
-        {
+        else {
             isSuccess = m_port->closeCOMPort();
         }
     }
 
-    if(isSuccess)
-    {
+    if(isSuccess) {
         if(m_isOpenPort == true) m_isOpenPort = false;
         else m_isOpenPort = true;
 
@@ -292,8 +280,7 @@ void WindowSettings::on_comboBox_activated(int index)
 
     QStringList listName;
 
-    if(m_isMicroGate)
-    {
+    if(m_isMicroGate) {
         QVector<QString> vecName;
         QString message = microgate::getAvailablePorts(vecName);
         emit sigNumFoundPorts(vecName.size());
@@ -310,8 +297,7 @@ void WindowSettings::on_comboBox_activated(int index)
         ui->comboBoxPort->addItems(listName);
         emit sigSendMessage(message);
     }
-    else
-    {
+    else {
         foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts()) {
             ui->comboBoxPort->addItem(info.portName());
         }
@@ -632,12 +618,10 @@ void WindowSettings::on_comboBoxMode_activated(const QString &arg1)
 
 void WindowSettings::on_comboBoxCreateRecord_activated(const QString &arg1)
 {
-    if(arg1 == "None")
-    {
+    if(arg1 == "None") {
         m_isWriteRecord = true;
     }
-    else if(arg1 == "Write")
-    {
+    else if(arg1 == "Write") {
         m_isWriteRecord = false;
     }
 }
@@ -916,8 +900,6 @@ void WindowSettings::on_comboBoxTypeRadar_activated(int index)
         ui->comboBoxS3->show();
         ui->comboBoxTarR->show();
         ui->comboBoxTrR->show();
-//        ui->comboBoxTar->setCurrentIndex(5);
-//        ui->comboBoxTr->setCurrentIndex(6);
     }
     else {
         ui->labACP->show();
@@ -955,7 +937,5 @@ void WindowSettings::on_comboBoxTypeRadar_activated(int index)
         ui->comboBoxS3->hide();
         ui->comboBoxTarR->hide();
         ui->comboBoxTrR->hide();
-//        ui->comboBoxTar->setCurrentIndex(2);
-//        ui->comboBoxTr->setCurrentIndex(3);
     }
 }
